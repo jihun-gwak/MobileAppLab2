@@ -6,12 +6,16 @@ import { useState } from "react";
 export default function Page() {
   const toDoList = ["Do laundry", "Go to gym", "Walk dog"];
 
-  const [tasks, setTasks] = useState(toDoList);
+  const [tasks, setTasks] = useState("");
+
+  const addTask = (taskText) => {
+    setTasks([...tasks, taskText]);
+  };
 
   return (
     <View>
       <ToDoList tasks={tasks} />
-      <ToDoForm />
+      <ToDoForm addTask={addTask} />
     </View>
   );
 }
