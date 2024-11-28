@@ -12,7 +12,15 @@ const ToDoForm = ({ addTask }) => {
         onChangeText={(text) => setTaskText(text)}
         value={taskText}
       />
-      <Button title="Add" onPress={() => addTask(taskText)} />
+      <Button
+        title="Add"
+        onPress={() => {
+          if (taskText.trim().length > 0) {
+            addTask(taskText);
+            setTaskText("");
+          }
+        }}
+      />
     </View>
   );
 };

@@ -12,14 +12,11 @@
       "backgroundColor": "#ffffff"
     },
     "scheme": "MobileAppLab2",
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
-      }
+      "newArchEnabled": true
+    },
+    "ios": {
+      "newArchEnabled": true
     },
     "web": {
       "favicon": "./assets/favicon.png"
